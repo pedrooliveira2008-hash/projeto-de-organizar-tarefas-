@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTasks | Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-glow"></div>
+
+    <main class="app">
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">✦</span>
+                <span>DevTasks</span>
+            </div>
+
+            <span class="badge">PERSONAL WORKSPACE</span>
+        </header>
+
+        <section class="hero">
+            <p class="eyebrow">SEU ESPAÇO DE PRODUTIVIDADE</p>
+            <h1>Organize suas ideias.<br>
+                <span>Execute seus planos.</span>
+            </h1>
+            <p class="subtitle">
+                Um passo de cada vez. Transforme tarefas em resultados.
+            </p>
+        </section>
+
+        <section class="task-card">
+            <div class="card-top">
+                <div>
+                    <h2>Minhas tarefas</h2>
+                    <p id="task-counter">0 tarefas pendentes</p>
+                </div>
+                <div class="date" id="current-date"></div>
+            </div>
+
+            <form id="task-form">
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="O que você precisa fazer?"
+                    maxlength="120"
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" class="add-button">
+                    <span>+</span> Adicionar
+                </button>
+            </form>
+
+            <nav class="filters">
+                <button class="filter active" data-filter="all">Todas</button>
+                <button class="filter" data-filter="pending">Pendentes</button>
+                <button class="filter" data-filter="completed">Concluídas</button>
+            </nav>
+
+            <ul id="task-list"></ul>
+
+            <div id="empty-state" class="empty-state">
+                <div class="empty-icon">✧</div>
+                <h3>Nenhuma tarefa por aqui</h3>
+                <p>Adicione uma tarefa e comece a organizar seu dia.</p>
+            </div>
+
+            <div class="card-footer">
+                <span id="footer-message">Pequenos passos geram grandes resultados.</span>
+                <button id="clear-completed" class="clear-button">
+                    Limpar concluídas
+                </button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Desenvolvido com <span>♥</span> e JavaScript</p>
+            <p>DEVTASKS © 2026</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
